@@ -1,0 +1,27 @@
+/* Página de registro*/
+
+body {
+    background-color: #54b5cd;
+  }
+
+/*Página de registro*/
+
+.regis .container #fila #columna #caja {
+	margin-top: 5em;
+	max-width: 60em;
+	height: 40em;
+	border: 1px solid #9f9f9f;
+	background-color: #f7f7f7;
+  }
+  
+  .regis .container #fila #columna #caja #form {
+	padding: 20px;
+  }
+  
+  .regis .container #fila #columna #caja #form #link {
+	margin-top: -85px;
+  }
+
+  #back{
+    float:right;
+  }

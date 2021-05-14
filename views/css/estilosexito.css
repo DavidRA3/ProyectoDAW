@@ -1,0 +1,17 @@
+/* Página de exito*/
+
+body {
+    background-color: #54b5cd;
+  }
+
+  .exito .container #fila #columna #caja {
+    margin-top: 5em;
+    max-width: 60em;
+    height: 20em;
+    border: 1px solid #9f9f9f;
+    background-color: #f7f7f7;
+  }
+  
+  .exito .container #fila #columna #caja #form {
+    padding: 20px;
+  }

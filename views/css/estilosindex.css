@@ -1,0 +1,21 @@
+/* Página de login*/
+
+body {
+    background-color: #54b5cd;
+  }
+
+.login .container #fila #columna #caja {
+    margin-top: 5em;
+    max-width: 60em;
+    height: 20em;
+    border: 1px solid #9f9f9f;
+    background-color: #f7f7f7;
+  }
+  
+  .login .container #fila #columna #caja #form {
+    padding: 20px;
+  }
+  
+  .login .container #fila #columna #caja #form #link {
+    margin-top: -85px;
+  }
