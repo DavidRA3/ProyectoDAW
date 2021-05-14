@@ -1,20 +1,24 @@
 <?php
 class Tarea {
 
+    protected $id_task;
     protected $title;
     protected $descr;
     protected $cat;
     protected $status;
     protected $urg;
         
-    function __construct($title,$descr,$cat,$status,$urg) {
+    function __construct($id_task,$title,$descr,$cat,$status,$urg) {
+        $this->id_task=$id_task;
         $this->title=$title;
         $this->descr=$descr;
         $this->cat=$cat;
         $this->status=$status;
         $this->urg=$urg;      
     }
-   
+
+    public function getId_task() {return $this->id_task;}
+    public function setId_task($id_task) { $this->id_task = $id_task; return $this; }
     public function getTitle() { return $this->title; }
     public function setTitle($title) { $this->title = $title; return $this; }
     public function getDescr() { return $this->descr; }

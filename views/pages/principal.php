@@ -60,6 +60,7 @@
                 ?>
 
                 <tr>
+                    <th>Id</th>
                     <th>Título</th>
                     <th>Descripción</th>
                     <th>Categoría</th>
@@ -70,9 +71,11 @@
                 </tr>
 
                     <?php
-                    
+            
                     for($i=0; $i<count($lista); $i++) {
+                    
                         echo "<tr>";
+                        echo "<td>" . $lista[$i]->getId_task() . "</td>";
                         echo "<td>" . $lista[$i]->getTitle() . "</td>";
                         echo "<td>" . $lista[$i]->getDescr() . "</td>";
                         echo "<td>" . $lista[$i]->getCat() . "</td>";

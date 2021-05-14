@@ -24,11 +24,10 @@ class tareas_model {
             $pdo->execute($parametros);
             $lista=array();
             while ($row=$pdo->fetch(PDO::FETCH_ASSOC)) {
-                $ct = new Tarea($row['title'],$row['descr'],$row['cat'],$row['status'],$row['urg']);
-                $lista[]=$ct;
+                $task = new Tarea($row['id_task'],$row['title'],$row['descr'],$row['cat'],$row['status'],$row['urg'],);
+                $lista[]=$task;
             }
             return $lista;
-    
         }
 
 
