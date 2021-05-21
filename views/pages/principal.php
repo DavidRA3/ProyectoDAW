@@ -107,8 +107,8 @@
                         echo "<td>" . $lista[$i]->getCat() . "</td>";
                         echo "<td>" . $lista[$i]->getStatus() . "</td>";
                         echo "<td>" . $lista[$i]->getUrg() . "</td>";
-                        echo "<td><a href='edit.php?$id_task'><img class='icon' src='../../images/edit.png' alt='Edit'></a></td>";
-                        echo "<td><a href='delete.php?$id_task'><img class='icon' src='../../images/delete.png' alt='Delete'></a></td>";
+                        echo "<td><a href='edit.php?id=$id_task'><img class='icon' src='../../images/edit.png' alt='Edit'></a></td>";
+                        echo "<td><a href='delete.php?id=$id_task'><img class='icon' src='../../images/delete.png' alt='Delete'></a></td>";
                         echo "</tr>";
 
                     }

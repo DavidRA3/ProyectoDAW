@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <title>Inicio</title>
+    <title>Nueva Tarea</title>
     <link rel="shortcut icon" type="image/jpg" href="images/favicon.png"/>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -110,7 +110,7 @@
 
                 if (isset($_POST['newtask'])) {
                     $controller = new tareas_controller();
-                    $tarea = new Tarea($_POST['title'], $_POST['descr'],
+                    $tarea = new Tarea($_POST['id_task'],$_POST['title'], $_POST['descr'],
                     $_POST['cat'], $_POST['status'], $_POST['urg']);
                     $controller->crear_tarea($tarea);
 

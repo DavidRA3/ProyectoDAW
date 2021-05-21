@@ -27,6 +27,31 @@
         return $exito;
 
     }
+
+    public function obtener($id_task) {
+        $this->t_modelo = new tareas_model();
+        $task = $this->obtener_tarea($id_task);
+        return $task;
+    }
+
+    public function editar_tarea($tarea) {
+        $this->t_modelo = new tareas_model();
+        $exito = $this->t_modelo->update($tarea);
+        return $exito;
+    }
+
+    public function borrar_tarea($id_task) {
+        $this->t_modelo = new tareas_model();
+        $exito = $this->t_modelo->delete($id_task);
+        return $exito;
+    }
+
+    public function obtener_tarea($id_task) {
+        $this->t_modelo = new tareas_model();
+        $task = $this->t_modelo->get_by_id($id_task);
+        return $task;
+        
+    }
             
     }
 

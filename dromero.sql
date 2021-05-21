@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version OVH
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 14-05-2021 a las 08:16:54
--- Versión del servidor: 10.4.18-MariaDB
--- Versión de PHP: 7.3.27
+-- Servidor: sqlprive-gg114090-001.privatesql
+-- Tiempo de generación: 20-05-2021 a las 21:30:37
+-- Versión del servidor: 5.6.51-log
+-- Versión de PHP: 7.0.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -44,11 +45,13 @@ CREATE TABLE `tasks` (
 --
 
 INSERT INTO `tasks` (`id_task`, `id_usr`, `title`, `descr`, `cat`, `status`, `urg`, `date`, `update_date`) VALUES
-(22, 8, 'Comprar billete', 'Vuelta a Segovia el viernes tarde.', 'Social', 'Planificada', 'Media', '2021-05-13 10:28:47', '0000-00-00 00:00:00'),
-(23, 10, 'Gimnasio', 'Ir al gimnasio esta tarde con Héctor.', 'Diaria', 'En espera', 'Baja', '2021-05-13 10:46:24', '0000-00-00 00:00:00'),
-(31, 10, 'Estudiar', 'Examen PHP en Junio', 'work', 'ongoing', 'high', '2021-05-13 13:27:51', '0000-00-00 00:00:00'),
-(32, 10, 'Comprar', 'Comprar Nike Blazer Amarillas', 'social', 'wait', 'low', '2021-05-13 14:11:35', '0000-00-00 00:00:00'),
-(33, 10, 'Comprar billete', 'Billete AVE Madrid el jueves', 'Compras', 'Planificada', 'mid', '2021-05-13 14:18:05', '0000-00-00 00:00:00');
+(1, 0, 'Prueba', 'Esto es una prueba', '', 'plan', 'low', '2021-05-12 12:05:39', '0000-00-00 00:00:00'),
+(10, 10, '', '', '', 'wait', '', '2021-05-12 12:35:38', '0000-00-00 00:00:00'),
+(11, 8, 'Prueba título', 'Descripción de prueba', 'family', 'done', 'high', '2021-05-12 12:36:26', '0000-00-00 00:00:00'),
+(12, 1, 'Titulo 1', 'Desc David 1', 'daily', 'closed', 'low', '2021-05-12 12:37:29', '0000-00-00 00:00:00'),
+(13, 10, 'pruebalista', 'aaaaaalista', 'daily', 'done', 'low', '2021-05-12 13:28:16', '0000-00-00 00:00:00'),
+(14, 8, 'Pruebamovil', 'Probando', 'daily', 'plan', 'mid', '2021-05-12 13:33:51', '0000-00-00 00:00:00'),
+(15, 10, 'Quifi', 'Ejercicios', 'Trabajo', 'En curso', 'high', '2021-05-18 12:02:44', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -63,7 +66,7 @@ CREATE TABLE `users` (
   `email` varchar(40) COLLATE utf8_spanish2_ci NOT NULL,
   `username` varchar(10) COLLATE utf8_spanish2_ci NOT NULL,
   `password` varchar(10) COLLATE utf8_spanish2_ci NOT NULL,
-  `date` datetime DEFAULT NULL
+  `date` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
 --
@@ -71,10 +74,11 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id_usr`, `name`, `surname`, `email`, `username`, `password`, `date`) VALUES
-(1, 'David', 'Romero Alonso', 'dra3david@gmail.com', 'david', '123abc', NULL),
-(8, 'Victoria', 'García Lucio', 'vicky@gmail.com', 'vitogs', 'qazaq', NULL),
-(10, 'Álvaro', 'Dominguez Silva', 'alvaro@gmail.com', 'alvaro', 'blazer', NULL),
-(21, 'Judith', 'Andrés', 'judi@gmail.com', 'judi', 'hood', '2021-05-13 13:00:27');
+(1, 'David', 'Romero Alonso', 'dra3david@gmail.com', 'david3', '1234', '0000-00-00 00:00:00'),
+(6, 'Judith', 'Andrés', 'judi@gmail.com', 'judi', 'qwerty', '0000-00-00 00:00:00'),
+(8, 'Álvaro', 'Domínguez Silva', 'alvaro@gmail.com', 'alvaro', 'blazer', '0000-00-00 00:00:00'),
+(10, 'Victoria', 'García Lucio', 'vitogs99@gmail.com', 'Vitogs', 'amborguesa', '0000-00-00 00:00:00'),
+(11, 'Prueba', 'Movil', 'A@gmail.com', 'Isidro', 'qazaq', '2021-05-12 13:35:39');
 
 --
 -- Índices para tablas volcadas
@@ -100,13 +104,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `tasks`
 --
 ALTER TABLE `tasks`
-  MODIFY `id_task` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id_task` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id_usr` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id_usr` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
