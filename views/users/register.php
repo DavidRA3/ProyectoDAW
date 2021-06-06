@@ -3,7 +3,7 @@
 <html lang="es">
   <head>
     <title>Registro</title>
-    <link rel="shortcut icon" type="image/jpg" href="images/favicon.png"/>
+    <link rel="shortcut icon" type="image/jpg" href="../../images/favicon.png"/>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -11,7 +11,7 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/estilosregis.css"/>
-    <script type="text/javascript" src="../js/funciones.js"></script> 
+    <script type="text/javascript" src="../js/validareg.js"></script> 
   </head>
 
     <body>

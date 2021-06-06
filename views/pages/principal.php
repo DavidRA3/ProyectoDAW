@@ -2,7 +2,7 @@
 <html lang="es">
   <head>
     <title>Inicio</title>
-    <link rel="shortcut icon" type="image/jpg" href="images/favicon.png"/>
+    <link rel="shortcut icon" type="image/jpg" href="../../images/favicon.png"/>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -86,7 +86,6 @@
                 ?> -->
 
                 <tr>
-                    <th>Id</th>
                     <th>Título</th>
                     <th>Descripción</th>
                     <th>Categoría</th>
@@ -101,7 +100,6 @@
                     for($i=0; $i<count($lista); $i++) {
                         $id_task = $lista[$i]->getId_task();
                         echo "<tr>";
-                        echo "<td>" . $lista[$i]->getId_task() . "</td>";
                         echo "<td>" . $lista[$i]->getTitle() . "</td>";
                         echo "<td>" . $lista[$i]->getDescr() . "</td>";
                         echo "<td>" . $lista[$i]->getCat() . "</td>";
