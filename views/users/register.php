@@ -48,11 +48,11 @@
                             </div>
                             <div class="form-group">
                                 <label for="password" class="text-info">Contraseña:</label><br>
-                                <input type="text" name="password" id="password" class="form-control">
+                                <input type="password" name="password" id="password" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label for="rpassword" class="text-info">Repita contraseña:</label><br>
-                                <input type="text" name="rpassword" id="rpassword" class="form-control">
+                                <input type="password" name="rpassword" id="rpassword" class="form-control">
                             </div>
                             <div class="form-group">
                                 <input type="submit" name="registrar" class="btn btn-danger btn-md" value="Enviar">

@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <title>Registro</title>
+    <title>Tarea Creada</title>
     <link rel="shortcut icon" type="image/jpg" href="../../images/favicon.png"/>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -18,7 +18,7 @@
 
 
     <div class="exito">
-        <h1 class="text-center text-white pt-5">Registro</h1>
+        <h1 class="text-center text-white pt-5">Tarea Creada</h1>
         <div class="container">
             <div id="fila" class="row justify-content-center align-items-center">
                 <div id="columna" class="col-md-6">

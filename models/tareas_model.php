@@ -71,14 +71,16 @@ class tareas_model {
                             ':descr'=>$tarea['descr'],
                             ':cat'=>$tarea['cat'],
                             ':status'=>$tarea['status'],
-                            ':urg'=>$tarea['urg']);
+                            ':urg'=>$tarea['urg'],
+                            ':update' => date('Y-m-d H:i:s'));
     
             $pdo = $this->db_handler->prepare("UPDATE tasks
                                                SET title=:title,
                                                    descr=:descr,
                                                    cat=:cat,
                                                    status=:status,
-                                                   urg=:urg                  
+                                                   urg=:urg,
+                                                   update_date=:update                
                                                WHERE id_task=:id_task");
 
             $pdo->execute($parametros);

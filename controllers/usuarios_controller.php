@@ -30,6 +30,12 @@
 
         }
 
+        public function obtener_nombre($id_usr) {
+            $this->u_modelo = new usuarios_model();
+            return ($this->u_modelo->get_name($id_usr));
+
+        }
+
         public function registrar_usuario($usuario) {
         $this->u_modelo = new usuarios_model();
         $exito = $this->u_modelo->insert($usuario);

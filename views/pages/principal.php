@@ -17,6 +17,7 @@
 
     <?php
     include_once('../../controllers/tareas_controller.php');
+    include_once('../../controllers/usuarios_controller.php');
     ?>
 
     <div class="container-fluid">
@@ -49,15 +50,14 @@
                     $id_usr = $_SESSION['id_usr'];
                     $controller = new tareas_controller();
                     $lista = $controller->mostrar_tareas($id_usr);
+
+                    $controller = new usuarios_controller();
+                    $nombre = $controller->obtener_nombre($id_usr);
     
                     echo "<br/>";
-                    echo "<p>Hola " . $_SESSION['username'] . "! Tienes " . count($lista) . " tareas:</p>";
+                    echo "<p>Hola " . $nombre . "! Tienes " . count($lista) . " tareas:</p>";
                     echo "<br/>";
                     echo "<table>";
-
-                ?>
-
-                <!-- <?php
 
                     $controller = new tareas_controller();
 
@@ -83,7 +83,7 @@
                         }
                     }
 
-                ?> -->
+                ?>
 
                 <tr>
                     <th>Título</th>

@@ -17,7 +17,7 @@
 
 
     <div class="exito">
-        <h1 class="text-center text-white pt-5">Borrado</h1>
+        <h1 class="text-center text-white pt-5">Tarea Borrada</h1>
         <div class="container">
             <div id="fila" class="row justify-content-center align-items-center">
                 <div id="columna" class="col-md-6">
@@ -25,7 +25,7 @@
                         <form id="form" class="form" action="principal.php" method="post">
                         <br/> <br/>
                             <h2 class="text-center text-info">La tarea ha sido</h2>
-                            <h2 class="text-center text-info">eliminada</h2>
+                            <h2 class="text-center text-info">borrada</h2>
 
                             <div class="form-group">
                                 <br/> <br/> 

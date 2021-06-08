@@ -31,7 +31,7 @@
                 <nav>
         
                     <a href="principal.php">Inicio</a>
-                    <a href="newtask.php">Editar Tarea</a>
+                    <a href="newtask.php">Nueva Tarea</a>
                     
                 </nav>
                 <a href="../users/logout.php"><img class="logout" src="../../images/logout.png" alt="Logout"></a>

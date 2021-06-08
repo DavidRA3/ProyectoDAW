@@ -78,6 +78,22 @@ class usuarios_model {
 
     }
 
+    public function get_name($id_usr) {
+        $parametros = array(':id_usr'=>$id_usr);
+        $pdo = $this->db_handler->prepare(
+            "SELECT name FROM users WHERE id_usr = :id_usr");
+        
+        $pdo->execute($parametros);
+        $name = null;
+        if ($pdo->rowcount()==1) {
+            $row = $pdo->fetch(PDO::FETCH_ASSOC);
+            $name = $row['name'];
+        }
+        
+        return $name;
+
+    }
+
 }
 ?>
 <?php ob_end_flush();?>

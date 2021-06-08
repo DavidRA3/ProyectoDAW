@@ -17,7 +17,7 @@
 
 
     <div class="exito">
-        <h1 class="text-center text-white pt-5">Editado</h1>
+        <h1 class="text-center text-white pt-5">Tarea Editada</h1>
         <div class="container">
             <div id="fila" class="row justify-content-center align-items-center">
                 <div id="columna" class="col-md-6">
