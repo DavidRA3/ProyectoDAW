@@ -34,7 +34,14 @@
                     <a href="newtask.php">Nueva Tarea</a>
                     
                 </nav>
-                <a href="../users/logout.php"><img class="logout" src="../../images/logout.png" alt="Logout"></a>
+                <div>
+                    <?php
+                        session_start();
+                        $id_usr = $_SESSION['id_usr'];
+                        echo "<a href='../users/edit_usr.php?id_usr=$id_usr'><img class='usr' src='../../images/user.png' alt='user'></a>"
+                    ?>
+                    <a href="../users/logout.php"><img class="logout" src="../../images/logout.png" alt="Logout"></a>
+                </div>
             </div>
         </div>
 
@@ -42,17 +49,14 @@
             <div class="col-12 content">
 
                 <?php
-                    session_start();
-                    /* echo "Id de usuario: " . $_SESSION['id_usr'];
-                    echo "<br/>";
-                    echo "<br/><h3>Lista de tareas de: " . $_SESSION['username'] . "</h3>"; */
 
                     $id_usr = $_SESSION['id_usr'];
-                    $controller = new tareas_controller();
-                    $lista = $controller->mostrar_tareas($id_usr);
 
                     $controller = new usuarios_controller();
                     $nombre = $controller->obtener_nombre($id_usr);
+
+                    $controller = new tareas_controller();
+                    $lista = $controller->mostrar_tareas($id_usr);               
     
                     echo "<br/>";
                     echo "<p>Hola " . $nombre . "! Tienes " . count($lista) . " tareas:</p>";
@@ -60,7 +64,6 @@
                     echo "<table>";
 
                     $controller = new tareas_controller();
-
 
                     if (isset($_GET['option'])) {
                         $metodo = $_GET['option'];
@@ -72,11 +75,9 @@
                         switch($option) {
 
                             case 'borrar':
-                                echo "LLamar al controlador para gestionar la petición de borrar";
                                 $controller->borrar($id_task);
                                 break;
                             case 'editar';
-                                echo "LLamar al controlador para gestionar la petición de modificar";
                                 $controller->editar($id_task);
                                 break;
                             
@@ -84,33 +85,35 @@
                     }
 
                 ?>
+                <table>
 
-                <tr>
-                    <th>Título</th>
-                    <th>Descripción</th>
-                    <th>Categoría</th>
-                    <th>Estado</th>
-                    <th>Urgencia</th>
-                    <th>Editar</th>
-                    <th>Borrar</th>
-                </tr>
+                    <tr>
+                        <th>Título</th>
+                        <th>Descripción</th>
+                        <th>Categoría</th>
+                        <th>Estado</th>
+                        <th>Urgencia</th>
+                        <th>Editar</th>
+                        <th>Borrar</th>
+                    </tr>
 
-                    <?php
-            
-                    for($i=0; $i<count($lista); $i++) {
-                        $id_task = $lista[$i]->getId_task();
-                        echo "<tr>";
-                        echo "<td>" . $lista[$i]->getTitle() . "</td>";
-                        echo "<td>" . $lista[$i]->getDescr() . "</td>";
-                        echo "<td>" . $lista[$i]->getCat() . "</td>";
-                        echo "<td>" . $lista[$i]->getStatus() . "</td>";
-                        echo "<td>" . $lista[$i]->getUrg() . "</td>";
-                        echo "<td><a href='edit.php?id=$id_task'><img class='icon' src='../../images/edit.png' alt='Edit'></a></td>";
-                        echo "<td><a href='delete.php?id=$id_task'><img class='icon' src='../../images/delete.png' alt='Delete'></a></td>";
-                        echo "</tr>";
+                        <?php
+                
+                            for($i=0; $i<count($lista); $i++) {
+                                $id_task = $lista[$i]->getId_task();
+                                echo "<tr>";
+                                echo "<td>" . $lista[$i]->getTitle() . "</td>";
+                                echo "<td>" . $lista[$i]->getDescr() . "</td>";
+                                echo "<td>" . $lista[$i]->getCat() . "</td>";
+                                echo "<td>" . $lista[$i]->getStatus() . "</td>";
+                                echo "<td>" . $lista[$i]->getUrg() . "</td>";
+                                echo "<td><a href='edit.php?id=$id_task'><img class='icon' src='../../images/edit.png' alt='Edit'></a></td>";
+                                echo "<td><a href='delete.php?id=$id_task'><img class='icon' src='../../images/delete.png' alt='Delete'></a></td>";
+                                echo "</tr>";
 
-                    }
-                    ?>
+                            }
+                        ?>
+                        
                 </table>
 
             </div>

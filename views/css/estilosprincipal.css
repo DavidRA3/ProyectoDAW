@@ -66,10 +66,15 @@ nav{
     text-decoration: none;
   }
   
+  .usr{
+  
+    height: 1.8rem;
+    margin-right: 0.5em;
+  }
+
   .logout{
   
-    height: 1.5rem;
-    float: right; 
+    height: 1.5rem; 
   }
 
   .icon{

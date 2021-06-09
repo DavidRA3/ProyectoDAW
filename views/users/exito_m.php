@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <title>Usuario Registrado</title>
+    <title>Usuario Modificado</title>
     <link rel="shortcut icon" type="image/jpg" href="../../images/favicon.png"/>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -17,15 +17,15 @@
 
 
     <div class="exito">
-        <h1 class="text-center text-white pt-5">Usuario Registrado</h1>
+        <h1 class="text-center text-white pt-5">Usuario Modificado</h1>
         <div class="container">
             <div id="fila" class="row justify-content-center align-items-center">
                 <div id="columna" class="col-md-6">
                     <div id="caja" class="col-md-12">
                         <form id="form" class="form" action="../../index.php" method="post">
                         <br/> <br/>
-                            <h2 class="text-center text-info">El usuario ha sido</h2>
-                            <h2 class="text-center text-info">registrado</h2>
+                            <h2 class="text-center text-info">Los datos de usuario</h2>
+                            <h2 class="text-center text-info">han sido modificados</h2>
 
                             <div class="form-group">
                                 <br/> <br/> 

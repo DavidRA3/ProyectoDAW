@@ -94,6 +94,45 @@ class usuarios_model {
 
     }
 
+    public function get_by_id($id_usr) {
+
+        $parametros = array(':id_usr'=>$id_usr);
+        $pdo = $this->db_handler->prepare("SELECT * FROM users WHERE id_usr = :id_usr"); 
+        $pdo->execute($parametros);
+        $task = null;
+
+        if ($pdo->rowcount()==1) {
+
+            $row = $pdo->fetch(PDO::FETCH_ASSOC);
+            $user = new Usuario($row['name'],$row['surname'],$row['email'],$row['username'],$row['password']);
+        }
+        return $user;
+
+    }
+
+    public function update($usuario) {
+
+        $parametros = array(':id_usr'=>$usuario['id_usr'],
+                            ':name'=>$usuario['name'],
+                            ':surname'=>$usuario['surname'],
+                            ':email'=>$usuario['email'],
+                            ':username'=>$usuario['username'],
+                            ':password'=>$usuario['password'],
+                            ':update' => date('Y-m-d H:i:s'));
+    
+            $pdo = $this->db_handler->prepare("UPDATE users
+                                               SET name=:name,
+                                                   surname=:surname,
+                                                   email=:email,
+                                                   username=:username,
+                                                   password=:password,
+                                                   update_date=:update                
+                                               WHERE id_usr=:id_usr");
+
+            $pdo->execute($parametros);
+            return $pdo->rowcount();
+    }
+
 }
 ?>
 <?php ob_end_flush();?>

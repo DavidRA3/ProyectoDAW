@@ -18,6 +18,19 @@
         header('Location: views/pages/principal.php');
         }
 
+        public function obtener($id_usr) {
+            $this->u_modelo = new usuarios_model();
+            $user = $this->obtener_usuario($id_usr);
+            return $user;
+        }
+
+        public function obtener_usuario($id_usr) {
+            $this->u_modelo = new usuarios_model();
+            $user = $this->u_modelo->get_by_id($id_usr);
+            return $user;
+            
+        }
+
         public function obtener_contraseña($username) {
             $this->u_modelo = new usuarios_model();
             return ($this->u_modelo->get_password($username));
@@ -41,6 +54,12 @@
         $exito = $this->u_modelo->insert($usuario);
         return $exito;
 
+    }
+
+    public function modificar_usuario($usuario) {
+        $this->u_modelo = new usuarios_model();
+        $exito = $this->u_modelo->update($usuario);
+        return $exito;
     }
             
     }
