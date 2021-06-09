@@ -22,7 +22,7 @@
             <div id="fila" class="row justify-content-center align-items-center">
                 <div id="columna" class="col-md-6">
                     <div id="caja" class="col-md-12">
-                        <form id="form" class="form" action="../../index.php" method="post">
+                        <form id="form" class="form" action="../pages/principal.php" method="post">
                         <br/> <br/>
                             <h2 class="text-center text-info">Los datos de usuario</h2>
                             <h2 class="text-center text-info">han sido modificados</h2>
