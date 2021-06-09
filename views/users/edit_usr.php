@@ -88,7 +88,7 @@
 
                 if (isset($_POST['volver'])) {
 
-                    header("Location: ../../index.php");
+                    header("Location: ../pages/principal.php");
 
                 }
 
