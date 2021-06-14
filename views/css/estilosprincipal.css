@@ -112,10 +112,11 @@ nav{
 
 /*Media Queries*/
 
-@media screen and (max-width: 500px) and (min-width: 100px){
+@media screen and (max-width: 500px) and (min-width: 10px){
 
   table{
     margin: auto;
+    padding-right: 1em;
     border-collapse: separate;
     border-radius: 1.5em;
     font-size: xx-small;
