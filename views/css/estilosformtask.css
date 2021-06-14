@@ -1,5 +1,9 @@
 /* Página de inicio */
 
+body{
+  background-color: #f7f7f7;
+}
+
 div.banner{
     background-color: #54b5cd;
     color: #f2f2f2;
