@@ -66,7 +66,7 @@
         if (isset($_POST['submit'])) {
 
             $passHash = $controller->obtener_contraseña($_POST['username']); //No distingue mayúsculas y minúsculas
-            $pass = $_POST['password'];
+            $pass = md5($_POST['password']);
 
             if ($pass === $passHash) { //password_verify no funciona ???
                 

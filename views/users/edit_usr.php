@@ -78,7 +78,7 @@
                                     'surname' => $_POST['surname'],
 									'email' => $_POST['email'], 
 									'username' => $_POST['username'],
-									'password' => $_POST['password']);
+									'password' => md5($_POST['password']));
 
                     $controller->modificar_usuario($usuario);
 

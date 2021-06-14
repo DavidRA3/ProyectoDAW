@@ -12,7 +12,7 @@ class Usuario {
         $this->surname=$surname;
         $this->email=$email;
         $this->username=$username;
-        $this->password=$password;      
+        $this->password=md5($password);      
     }
    
     public function getName() { return $this->name;}
