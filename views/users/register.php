@@ -55,7 +55,7 @@
                                 <input type="password" name="rpassword" id="rpassword" class="form-control">
                             </div>
                             <div class="form-group">
-                                <input type="submit" name="registrar" class="btn btn-danger btn-md" value="Enviar">
+                                <input type="submit" id="registrar" name="registrar" class="btn btn-danger btn-md" value="Enviar">
                                 <input type="submit" id="back" name="volver" class="btn btn-info btn-md" value="Volver">
                             </div>
                         </form>
