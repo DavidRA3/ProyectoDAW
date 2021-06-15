@@ -48,7 +48,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="username" class="text-info">Usuario:</label><br>
-                                <input type="text" name="username" id="username" class="form-control"value="<?php echo $user->getUsername();?>">
+                                <input type="text" name="username" id="username" class="form-control"value="<?php echo $user->getUsername();?>" readonly>
                             </div>
                             <div class="form-group">
                                 <label for="password" class="text-info">Contraseña:</label><br>

@@ -2,7 +2,8 @@ $(document).ready(function(){
     
     $('#name').focus(); //Focus en el primer del registro
     validation(); //validaciones del formulario
-    
+    check_name(); //comprueba que no exista ya un usuario en bbd con ese mismo username
+
 }); //Fin ready
 
 
@@ -92,3 +93,27 @@ function validation(){
     }); //end click event
     
 }//end validation
+
+function check_name(){
+
+    $(document).on('focusout', '#username', function(e) { 
+
+        let username = $('#username').val();
+        //console.log('Datos recogidos:');
+        
+        $.post(
+            "../../models/ajax_check_name.php",
+            {"username": username},
+            function (response) {
+                console.log(response); //descomentar para comprobar valores
+                if (response['error']) {
+                    $("label[for='username']").html('<span style="color: red">* Ya existe un usuario con el mismo nombre:</span>');
+                    $('#username').focus();
+                }else $("label[for='username']").html('Usuario:');
+            },
+            "json"
+        );
+          
+    }); //end focusout event
+
+}//end check_name 
