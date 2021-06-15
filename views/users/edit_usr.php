@@ -52,11 +52,11 @@
                             </div>
                             <div class="form-group">
                                 <label for="password" class="text-info">Contraseña:</label><br>
-                                <input type="password" name="password" id="password" class="form-control" value="<?php echo $user->getPassword();?>">
+                                <input type="password" name="password" id="password" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label for="rpassword" class="text-info">Repita contraseña:</label><br>
-                                <input type="password" name="rpassword" id="rpassword" class="form-control" value="<?php echo $user->getPassword();?>">
+                                <input type="password" name="rpassword" id="rpassword" class="form-control">
                             </div>
                             <div class="form-group">
                                 <input type="submit" id="registrar" name="modificar" class="btn btn-danger btn-md" value="Enviar">

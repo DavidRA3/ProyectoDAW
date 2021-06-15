@@ -31,7 +31,7 @@ function validation(){
 
         //------------- validación de campos del formulario de registro  ------------------
 
-        if (!/^([A-Z]{1}[a-zñáéíóú]+[\s]*)+$/.test(args.name)) {
+        if (!/^([A-ZÁ]{1}[a-zñáéíóú]+[\s]*)+$/.test(args.name)) {
             formuOK = false;
             //$("#name").attr("placeholder", "Error: Introduce tus nombre");
             $("label[for='name']").html('<span style="color: red">* Introduce tu nombre (la primera en mayúsculas):</span>');
