@@ -22,6 +22,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE DATABASE dromero;
+USE dromero;
 
 -- --------------------------------------------------------
 
@@ -46,14 +47,9 @@ CREATE TABLE `tasks` (
 --
 
 INSERT INTO `tasks` (`id_task`, `id_usr`, `title`, `descr`, `cat`, `status`, `urg`, `date`, `update_date`) VALUES
-(1, 0, 'Prueba', 'Esto es una prueba', '', 'plan', 'low', '2021-05-12 12:05:39', '0000-00-00 00:00:00'),
-(10, 10, '', '', '', 'wait', '', '2021-05-12 12:35:38', '0000-00-00 00:00:00'),
-(12, 1, 'Titulo 1', 'Desc David 1', 'daily', 'closed', 'low', '2021-05-12 12:37:29', '0000-00-00 00:00:00'),
-(13, 10, 'pruebalista', 'aaaaaalista', 'daily', 'done', 'low', '2021-05-12 13:28:16', '0000-00-00 00:00:00'),
-(15, 10, 'Quifi', 'Ejercicios', 'Trabajo', 'En curso', 'high', '2021-05-18 12:02:44', '0000-00-00 00:00:00'),
-(18, 8, 'Prueba título', 'Esto es una prueba editada', 'Diaria', 'En espera', 'Media', '2021-05-20 23:32:31', '0000-00-00 00:00:00'),
-(21, 8, 'NT', 'Nueva tarea añadida, versión final', 'Social', 'En curso', 'Media', '2021-06-05 21:10:01', '0000-00-00 00:00:00'),
-(23, 13, 'Zebra', 'La zebra es un caballotigre', 'Social', 'En curso', 'Baja', '2021-06-08 20:28:47', '0000-00-00 00:00:00');
+(24, 15, 'Memoria', 'Realizar memoria proyecto', 'Trabajo', 'Terminada', 'Alta', '2021-06-20 19:35:21', '0000-00-00 00:00:00'),
+(25, 15, 'Proyecto', 'Realización del proyecto de DAW', 'Trabajo', 'En curso', 'Media', '2021-06-20 19:39:09', '0000-00-00 00:00:00'),
+(26, 16, 'Recoger gafas de sol', 'Ir a la óptica antes de que cierren', 'Compras', 'Planificada', 'Media', '2021-06-20 19:42:12', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -67,7 +63,7 @@ CREATE TABLE `users` (
   `surname` varchar(50) COLLATE utf8_spanish2_ci NOT NULL,
   `email` varchar(40) COLLATE utf8_spanish2_ci NOT NULL,
   `username` varchar(10) COLLATE utf8_spanish2_ci NOT NULL,
-  `password` varchar(10) COLLATE utf8_spanish2_ci NOT NULL,
+  `password` varchar(32) COLLATE utf8_spanish2_ci NOT NULL,
   `date` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
@@ -76,11 +72,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id_usr`, `name`, `surname`, `email`, `username`, `password`, `date`) VALUES
-(1, 'David', 'Romero Alonso', 'dra3david@gmail.com', 'david3', '1234', '0000-00-00 00:00:00'),
-(8, 'Álvaro', 'Domínguez Silva', 'alvaro@gmail.com', 'alvaro', 'blazer', '0000-00-00 00:00:00'),
-(10, 'Victoria', 'García Lucio', 'vitogs99@gmail.com', 'Vitogs', 'amborguesa', '0000-00-00 00:00:00'),
-(12, 'Aitor', 'Profe profe', 'aitor@gmail.com', 'aitor', 'qazaq', '2021-05-21 02:08:24'),
-(13, 'judi', 'andres', 'judi@gmail.com', 'judi', 'judini', '2021-06-08 20:28:10');
+(15, 'David', 'Romero', 'darom@gmail.com', 'david3', '3d517d7999a1cd342bb053619caac1aa', '2021-06-20 19:34:36'),
+(16, 'Jose', 'Pamplinas', 'josepan@gimeil.com', 'josu', '407a6922c7096b48120ba73a2cb852f8', '2021-06-20 19:39:55');
 
 --
 -- Índices para tablas volcadas
